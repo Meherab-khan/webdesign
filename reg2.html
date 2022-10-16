@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-image: url(img/R.jpg);
+        }
+        body{
+            background-image: url(img/R.jpg);
+        }
+        /* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    position: absolute;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 15px;
+   
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: White;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: none;
+    overflow: hidden;
+}
+.container form .form{
+    position: absolute;
+    background-color: none;
+    transition: 0.3s ease;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: White;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size:16px;
+    font-weight: 500;
+    color: #7AB730;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: White;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+    background-color: antiquewhite;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #000000;
+}
+.input-field input[type="date"]:valid{
+    color:rgb(0, 0, 0);
+}
+.input-field input[type="text"]:valid{
+    color:rgb(0, 0, 0);
+}
+
+.khk{
+    background-color: #7AB730;
+    color: aliceblue;
+   margin: 0;
+   padding: 0;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="CSS/Rstyle.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Make your Reservation </title> 
+</head>
+<body>
+    <div class="container">
+        <header style="padding-left: 0px;">Make your Reservation</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Place Details :</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Place Name :</label>
+                            <input type="text" placeholder="Place Name :" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Hotels Rating :</label>
+                            <select >
+                                <option disabled selected>Select Hotels Rating</option>
+                                <option>1 Star</option>
+                                <option>2 Star</option>
+                                <option>3 Star</option>
+                                <option>4 Star</option>
+                                <option>5 Star</option>
+                                <option>6 Star</option>
+                                <option>7 Star</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Bed No. :</label>
+                            <input type="number" placeholder="Bed No. :" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Booking Date :</label>
+                            <input type="date" placeholder="Booking Date :" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>How Many Night :</label>
+                            <input type="number" placeholder="How Many Night :" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>How Many Day :</label>
+                            <input type="number" placeholder="How Many Day :" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Travel Details :</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Place :</label>
+                            <input type="text" placeholder="Enter Place Name :" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Arrival Date :</label>
+                            <input type="date" placeholder="Enter Arrival Date :" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Return Date :</label>
+                            <input type="number" placeholder="Enter Return Date :" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Visa Time :</label>
+                            <select >
+                                <option disabled selected>Visa Time :</option>
+                                <option>Less Then 1 Month</option>
+                                <option>1 - 2 Month</option>
+                                <option>2 - 3 Month</option>
+                                <option>More Then 3 Month</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued Date</label>
+                            <input type="date" placeholder="Enter your issued date" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter expiry date" >
+                        </div>
+                    </div>
+                    
+                    <div class="btn">
+                        <a href="Sbox.html"><input type="button" value="Submit" class="khk"></a>
+                    </div>
+                </div> 
+            </div>
+
+             
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
